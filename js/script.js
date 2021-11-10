@@ -3,7 +3,7 @@ let d = new Date();
 quesito();
 
 function quesito() {
-  fetch("https://foaas.com/awesome/carlo" , {
+  fetch("https://uselessfacts.jsph.pl/random.json?language=en" , {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
     //mode: 'cors', // no-cors, *cors, same-origin
     //cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -17,6 +17,6 @@ function quesito() {
     return response.json();
   }).then(x => {
     console.log({x});
-    document.body.innerHTML = "<h1>"+ x.message + "</h1>";
+    document.body.innerHTML = "<h1>"+ x.text + "</h1>";
   });
 }
