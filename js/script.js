@@ -17,6 +17,6 @@ function quesito() {
     return response.json();
   }).then(x => {
     console.log({x});
-    document.body.innerHTML = "<h1>"+ x + "</h1>";
+    document.body.innerHTML = "<h1>"+ x.message + "</h1>";
   });
 }
